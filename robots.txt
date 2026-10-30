@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://s20240106-web.github.io/Mathematics-learning-website/sitemap.xml

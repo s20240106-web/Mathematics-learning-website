@@ -1097,6 +1097,11 @@
      Init
      ========================================================================== */
 
+  const requestedUnit = new URLSearchParams(window.location.search).get("unit");
+  if (requestedUnit && UNIT_IDS.includes(requestedUnit)) {
+    activeUnitId = requestedUnit;
+  }
+
   updateProgressUI();
   renderLessonTabs();
   renderLessonPanel(false);

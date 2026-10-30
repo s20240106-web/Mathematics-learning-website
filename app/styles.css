@@ -426,6 +426,26 @@ h2 em {
   flex: 0 0 auto;
 }
 
+.app-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 2px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.app-back-link:hover {
+  color: var(--green);
+}
+
+.app-back-link span {
+  font-size: 12px;
+}
+
 .progress-chip {
   display: inline-flex;
   align-items: center;
@@ -3334,6 +3354,21 @@ input[type="range"]::-moz-range-thumb {
   letter-spacing: 0.03em;
 }
 
+.footer-bottom strong {
+  color: rgba(255, 253, 247, 0.55);
+  font-weight: 600;
+}
+
+.footer-back {
+  color: rgba(216, 255, 99, 0.65);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-back:hover {
+  color: var(--lime);
+}
+
 /* ==========================================================================
    Toast
    ========================================================================== */
@@ -3455,6 +3490,10 @@ input[type="range"]::-moz-range-thumb {
 
   .header-actions {
     margin-left: auto;
+  }
+
+  .app-back-link {
+    display: none;
   }
 
   .hero-grid {

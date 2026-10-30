@@ -3,468 +3,582 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>指數溫習站｜中學生數學 · 指數與科學記數法</title>
-  <meta name="description" content="為中一至中三學生而設的指數溫習站。由指數定義、指數定律、零與負指數，到科學記數法，配合互動實驗室、即時練習與速查表，逐格拆解指數概念。">
-  <meta name="theme-color" content="#12372b">
-  <meta property="og:title" content="指數溫習站｜中學生數學">
-  <meta property="og:description" content="四個單元、互動指數實驗室、40 題即時練習。將指數由「唔明」變成「我識」。">
+  <title>指數溫習站｜中一至中三互動數學學習平台</title>
+  <meta name="description" content="指數溫習站是一個為中一至中三學生設計的互動數學平台，涵蓋指數定律、零與負指數及科學記數法，配合指數實驗室、40 題即時練習與學習進度。由 3A 陳穎霖設計及開發。">
+  <meta name="author" content="3A 陳穎霖">
+  <meta name="theme-color" content="#0f3528">
+  <link rel="canonical" href="https://s20240106-web.github.io/Mathematics-learning-website/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://s20240106-web.github.io/Mathematics-learning-website/?lang=zh">
+  <link rel="alternate" hreflang="en" href="https://s20240106-web.github.io/Mathematics-learning-website/?lang=en">
+  <meta property="og:title" content="指數溫習站｜中一至中三互動數學學習平台">
+  <meta property="og:description" content="四個單元、互動指數實驗室、40 題即時練習。將指數由「唔明」變成「我識」。由 3A 陳穎霖設計及開發。">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312372b'/%3E%3Ctext x='13' y='45' font-family='Georgia,serif' font-size='38' fill='%23d8ff63'%3E2%3C/text%3E%3Ctext x='37' y='29' font-family='Georgia,serif' font-size='24' fill='%23fffdf7'%3E5%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="app.js"></script>
+  <meta property="og:url" content="https://s20240106-web.github.io/Mathematics-learning-website/">
+  <meta property="og:image" content="https://s20240106-web.github.io/Mathematics-learning-website/assets/social-preview.png">
+  <meta property="og:image:alt" content="指數溫習站產品網站首頁">
+  <meta property="og:locale" content="zh_HK">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://s20240106-web.github.io/Mathematics-learning-website/assets/social-preview.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f3528'/%3E%3Ctext x='13' y='45' font-family='Georgia,serif' font-size='38' fill='%23d8ff63'%3E2%3C/text%3E%3Ctext x='37' y='29' font-family='Georgia,serif' font-size='24' fill='%23fffdf7'%3E5%3C/text%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="assets/app-home.png" fetchpriority="high">
+  <link rel="stylesheet" href="site.css">
+  <script defer src="site.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalApplication",
+    "name": "指數溫習站 / Exponent Station",
+    "url": "https://s20240106-web.github.io/Mathematics-learning-website/",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web",
+    "inLanguage": ["zh-Hant-HK", "en"],
+    "description": "An interactive exponents and scientific notation revision platform for junior secondary students, featuring four learning units, an exponent lab, and 40 explained practice questions.",
+    "author": {
+      "@type": "Person",
+      "name": "陳穎霖",
+      "alternateName": "Chan Wing Lam"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "HKD"
+    }
+  }
+  </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">跳至主要內容</a>
+<body data-lang="zh">
+  <a class="skip-link" href="#main" data-i18n="skip">跳至主要內容</a>
+
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <p><span class="announcement-dot" aria-hidden="true"></span><span data-i18n="announcementLeft">學生原創學習產品 · 香港</span></p>
+      <p class="announcement-right" data-i18n="announcementRight">適合中一至中三 · 免費使用</p>
+    </div>
+  </div>
 
   <header class="site-header" id="siteHeader">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="指數溫習站主頁">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="指數溫習站首頁" data-i18n-aria="brandHome">
         <span class="brand-mark" aria-hidden="true">a<sup>n</sup></span>
-        <span class="brand-text">指數溫習站<small>EXPONENT STATION</small></span>
+        <span class="brand-copy">
+          <span class="brand-name" data-i18n="brandName">指數溫習站</span>
+          <span class="brand-sub" data-i18n="brandSub">EXPONENT STATION</span>
+        </span>
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="主要導覽">
-        <a class="nav-link" href="#map">學習地圖</a>
-        <a class="nav-link" href="#lesson">互動課堂</a>
-        <a class="nav-link" href="#lab">指數實驗室</a>
-        <a class="nav-link" href="#practice">練習站</a>
-        <a class="nav-link" href="#formulas">公式表</a>
+      <nav class="desktop-nav" id="desktopNav" aria-label="主要導覽" data-i18n-aria="mainNavLabel">
+        <a href="#why" data-i18n="navApproach">理念</a>
+        <a href="#features" data-i18n="navFeatures">功能</a>
+        <a href="#curriculum" data-i18n="navCurriculum">課程</a>
+        <a href="#showcase" data-i18n="navShowcase">示範</a>
+        <a href="#author" data-i18n="navAuthor">作者</a>
       </nav>
 
       <div class="header-actions">
-        <a class="progress-chip" href="#map" aria-label="查看學習進度">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span id="headerProgress">進度 0/4</span>
+        <div class="lang-toggle" role="group" aria-label="選擇語言" data-i18n-aria="langLabel">
+          <button class="lang-btn" type="button" data-lang="zh" aria-pressed="true" aria-label="繁體中文">繁</button>
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
+        </div>
+        <a class="btn btn-lime btn-header" href="app/">
+          <span data-i18n="headerCta">開啟平台</span>
+          <span class="btn-arrow" aria-hidden="true">↗</span>
         </a>
-        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開啟選單">
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="開啟選單" data-i18n-aria="menuOpen">
           <span></span><span></span>
         </button>
       </div>
     </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="流動選單" data-i18n-aria="mobileNavLabel">
+      <a href="#why" data-i18n="navApproach">理念</a>
+      <a href="#features" data-i18n="navFeatures">功能</a>
+      <a href="#curriculum" data-i18n="navCurriculum">課程</a>
+      <a href="#showcase" data-i18n="navShowcase">示範</a>
+      <a href="#author" data-i18n="navAuthor">作者</a>
+      <a href="app/" class="mobile-nav-cta">
+        <span data-i18n="headerCta">開啟平台</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="container hero-grid">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <span class="hero-watermark" aria-hidden="true">a<sup>n</sup></span>
+      <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>中一至中三 · 數學溫習</p>
-          <h1>
-            <span class="hero-line">指數<span class="hero-sup" aria-hidden="true">n</span></span>
-            <span class="hero-line"><span class="marker">溫習站</span></span>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="heroEyebrow">中一至中三 · 指數與科學記數法</span></p>
+          <h1 class="hero-title">
+            <span class="hero-title-line" data-i18n="heroTitle1">讓指數，</span>
+            <span class="hero-title-line hero-accent" data-i18n="heroTitle2">真正入腦。</span>
           </h1>
-          <p class="hero-lead">由「指數係咩」到科學記數法，用四個單元、互動實驗室同即時練習，將一頁頁筆記變成你真正掌握嘅概念。</p>
+          <p class="hero-lead" data-i18n="heroLead">由定義、定律到科學記數法：四個單元、互動實驗室與 40 題即時練習，將抽象規則變成看得見的推理。</p>
           <div class="hero-actions">
-            <a class="btn btn-dark" href="#map">開始溫習<span class="btn-arrow" aria-hidden="true">↗</span></a>
-            <a class="btn btn-ghost" href="#practice">直接挑戰 5 題<span class="btn-arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-lime" href="app/">
+              <span data-i18n="ctaStart">免費開始學習</span>
+              <span class="btn-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn-ghost-light" href="#features">
+              <span data-i18n="ctaExplore">探索產品</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
           </div>
+
+          <div class="hero-author">
+            <span class="author-avatar" aria-hidden="true">CWL</span>
+            <p>
+              <span class="hero-author-label" data-i18n="heroAuthorLabel">設計及開發</span>
+              <strong>3A 陳穎霖</strong>
+              <span class="hero-author-role">Chan Wing Lam · <span data-i18n="heroAuthorRole">3A 班 · 香港</span></span>
+            </p>
+          </div>
+
           <dl class="hero-stats">
-            <div><dt>單元</dt><dd>4<small>個</small></dd></div>
-            <div><dt>練習題</dt><dd>40<small>題</small></dd></div>
-            <div><dt>程度</dt><dd class="stat-text">中一至中三</dd></div>
+            <div><dt data-i18n="heroStatUnits">學習單元</dt><dd>4</dd></div>
+            <div><dt data-i18n="heroStatQuestions">練習題</dt><dd>40</dd></div>
+            <div><dt data-i18n="heroStatSignup">註冊</dt><dd data-i18n="heroStatSignupValue">零</dd></div>
           </dl>
         </div>
 
         <div class="hero-visual">
-          <div class="power-card">
-            <div class="power-card-top">
-              <span class="mono-label">POWER CURVE / 01</span>
-              <span class="live-pill"><span aria-hidden="true"></span>指數增長</span>
+          <div class="product-frame">
+            <div class="window-chrome">
+              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="window-label" data-i18n="browserLabel">互動學習平台</span>
+              <span class="window-live"><i aria-hidden="true"></i>LIVE</span>
             </div>
-            <div class="power-readout">
-              <span class="power-expression">2<sup>5</sup></span>
-              <span class="power-equals">= 32</span>
-            </div>
-            <p class="power-caption">五個 2 相乘，就係 32。指數每加 1，數值再乘 2。</p>
-            <div class="power-chart">
-              <svg viewBox="0 0 440 248" role="img" aria-label="圖表顯示 2 的 n 次方由 1 快速增長至 32">
-                <defs>
-                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#d8ff63" stop-opacity=".28"/>
-                    <stop offset="100%" stop-color="#d8ff63" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <g class="chart-grid">
-                  <line x1="40" y1="60" x2="400" y2="60"/>
-                  <line x1="40" y1="110" x2="400" y2="110"/>
-                  <line x1="40" y1="160" x2="400" y2="160"/>
-                  <line x1="40" y1="210" x2="400" y2="210"/>
-                </g>
-                <path class="chart-area" d="M40 205 C66 204 88 202 112 200 C147 197 160 191 184 188 C219 181 228 174 256 166 C290 152 298 135 328 122 C349 112 370 86 400 60 L400 220 L40 220 Z"/>
-                <path class="chart-line" d="M40 205 C66 204 88 202 112 200 C147 197 160 191 184 188 C219 181 228 174 256 166 C290 152 298 135 328 122 C349 112 370 86 400 60"/>
-                <line class="chart-guide" x1="400" y1="60" x2="400" y2="220"/>
-                <line class="chart-guide" x1="40" y1="60" x2="400" y2="60"/>
-                <circle class="chart-point-halo" cx="400" cy="60" r="14"/>
-                <circle class="chart-point" cx="400" cy="60" r="5"/>
-                <g class="chart-labels">
-                  <text x="40" y="238">n = 0</text>
-                  <text x="343" y="238">n = 5</text>
-                  <text x="408" y="64">32</text>
-                  <text x="408" y="214">1</text>
-                </g>
-              </svg>
-            </div>
-            <div class="power-card-footer">
-              <div><span>底數 BASE</span><strong>2</strong></div>
-              <div><span>指數 INDEX</span><strong>5</strong></div>
-              <div><span>科學記數法</span><strong>3.2 × 10¹</strong></div>
+            <div class="product-shot-wrap">
+              <img class="product-shot" src="assets/app-home.png" alt="指數溫習站學習平台首頁，展示指數增長圖表與學習進度" data-i18n-alt="heroImageAlt">
             </div>
           </div>
-          <div class="floating-formula" aria-hidden="true">
-            <span>同底相乘</span>
+
+          <div class="float-card float-progress">
+            <div class="progress-dial" aria-hidden="true"><span>25%</span></div>
+            <div>
+              <strong data-i18n="floatProgress">學習進度</strong>
+              <small data-i18n="floatProgressSub">自動儲存</small>
+            </div>
+          </div>
+
+          <div class="float-card float-formula">
+            <span data-i18n="floatFormula">同底相乘</span>
             a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup>
           </div>
+
+          <span class="student-sticker"><span data-i18n="heroSticker">學生原創</span><b>2026</b></span>
         </div>
+      </div>
+
+      <div class="container hero-bottom">
+        <span class="hero-bottom-note" data-i18n="heroFootnote">無需下載 · 無需註冊 · 即開即用</span>
+        <a class="scroll-cue" href="#why"><span data-i18n="scrollHint">向下探索</span><span aria-hidden="true">↓</span></a>
       </div>
     </section>
 
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>同底相乘 <b>指數相加</b></span><i>✳</i>
-        <span>同底相除 <b>指數相減</b></span><i>✳</i>
-        <span>冪的冪 <b>指數相乘</b></span><i>✳</i>
-        <span>a⁰ = 1 <b>（a ≠ 0）</b></span><i>✳</i>
-        <span>a⁻ⁿ = 1/aⁿ</span><i>✳</i>
-        <span>科學記數法 <b>A × 10ⁿ</b></span><i>✳</i>
-        <span>同底相乘 <b>指數相加</b></span><i>✳</i>
-        <span>同底相除 <b>指數相減</b></span><i>✳</i>
-        <span>冪的冪 <b>指數相乘</b></span><i>✳</i>
-        <span>a⁰ = 1 <b>（a ≠ 0）</b></span><i>✳</i>
-        <span>a⁻ⁿ = 1/aⁿ</span><i>✳</i>
-        <span>科學記數法 <b>A × 10ⁿ</b></span><i>✳</i>
+    <div class="concept-ticker" aria-hidden="true">
+      <div class="concept-ticker-track">
+        <span>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></span><i>✳</i>
+        <span>a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></span><i>✳</i>
+        <span>(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></span><i>✳</i>
+        <span>a<sup>0</sup> = 1</span><i>✳</i>
+        <span>a<sup>−n</sup> = 1 / a<sup>n</sup></span><i>✳</i>
+        <span>A × 10<sup>n</sup></span><i>✳</i>
+        <span>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></span><i>✳</i>
+        <span>a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></span><i>✳</i>
+        <span>(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></span><i>✳</i>
+        <span>a<sup>0</sup> = 1</span><i>✳</i>
+        <span>a<sup>−n</sup> = 1 / a<sup>n</sup></span><i>✳</i>
+        <span>A × 10<sup>n</sup></span><i>✳</i>
       </div>
     </div>
 
-    <section class="section map-section" id="map">
+    <section class="section why" id="why">
+      <div class="container">
+        <div class="section-index">
+          <p class="kicker"><span>01</span><span data-i18n="whyKicker">理念</span></p>
+          <p class="section-side" data-i18n="whySide">不是再多一個題庫，而是一個讓規則變得可見、可試、可記住的學習空間。</p>
+        </div>
+
+        <div class="why-grid">
+          <h2 class="why-title">
+            <span data-i18n="whyTitle1">背完公式，</span>
+            <span class="underline" data-i18n="whyTitle2">唔等於明白。</span>
+          </h2>
+          <div class="why-copy">
+            <p data-i18n="whyLead">指數最難的地方，往往不是計算，而是分辨幾時相加、幾時相乘，以及為甚麼 a⁰ 會等於 1。指數溫習站把每一步拆開，讓學生先看見規律，再建立信心。</p>
+            <div class="why-quote">
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <p data-i18n="whyQuote">先理解，後練習。</p>
+              <small data-i18n="whyQuoteSub">這是整個產品的設計起點。</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="principles">
+          <article class="principle">
+            <span class="principle-num">01</span>
+            <h3 data-i18n="principle1Title">看得見的數學</h3>
+            <p data-i18n="principle1Body">拖動指數，看着 2⁵ 由 1 增長到 32。抽象規則變成可以觀察的變化。</p>
+          </article>
+          <article class="principle">
+            <span class="principle-num">02</span>
+            <h3 data-i18n="principle2Title">有次序的課程</h3>
+            <p data-i18n="principle2Body">由底數與指數開始，逐層走到定律、負指數與科學記數法，不跳步。</p>
+          </article>
+          <article class="principle">
+            <span class="principle-num">03</span>
+            <h3 data-i18n="principle3Title">有回饋的練習</h3>
+            <p data-i18n="principle3Body">每一題都有解釋與答案回顧，讓學生知道自己為甚麼錯，而不只是錯了幾題。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
       <div class="container">
         <div class="section-heading">
-          <div class="heading-main">
-            <p class="kicker"><span>01</span>學習地圖</p>
-            <h2>四個站，<br><em>搭通指數概念。</em></h2>
+          <div>
+            <p class="kicker"><span>02</span><span data-i18n="featuresKicker">產品功能</span></p>
+            <h2>
+              <span data-i18n="featuresTitle1">一個平台，</span>
+              <span class="underline" data-i18n="featuresTitle2">完整的學習循環。</span>
+            </h2>
           </div>
-          <div class="heading-side">
-            <p>建議由上而下學。每個單元都有概念拆解、例題同常見錯誤，最後用練習站檢查自己係咪真正明白。</p>
-            <div class="progress-widget">
-              <div class="progress-ring" id="progressRing" style="--progress: 0" role="img" aria-label="整體學習進度 0%">
-                <span id="progressPercent">0%</span>
-              </div>
-              <div class="progress-copy">
-                <span>你的進度</span>
-                <strong id="progressLabel">0 / 4 個單元</strong>
-                <button class="text-button" type="button" data-reset-progress>重設進度</button>
-              </div>
-            </div>
-          </div>
+          <p class="section-lead" data-i18n="featuresLead">由第一條定義，到最後一次自我檢查，所有工具都放在同一個地方。</p>
         </div>
 
-        <div class="map-grid">
-          <a class="map-card map-card-dark" href="#lesson" data-unit="basics" aria-label="前往單元一：指數基礎">
-            <div class="map-card-top">
-              <span class="map-num">01</span>
-              <span class="map-status" data-status="basics">未開始</span>
+        <div class="feature-grid">
+          <article class="feature feature-dark feature-wide">
+            <div class="feature-topline">
+              <span class="feature-tag" data-i18n="feature1Tag">STRUCTURED LESSONS</span>
+              <span class="feature-index">01</span>
             </div>
-            <div class="map-art" aria-hidden="true"><span class="art-formula">a<sup>n</sup></span><span class="art-eq">=</span><span class="art-small">a × a × …</span></div>
-            <div class="map-card-body">
-              <p>入門 · 約 6 分鐘</p>
-              <h3>指數基礎</h3>
-              <span class="map-desc">搞清底數、指數同冪，先用圖像理解「重複相乘」。</span>
+            <h3 data-i18n="feature1Title">四站式學習路徑</h3>
+            <p data-i18n="feature1Body">每個單元都有概念拆解、公式、例題、常見錯誤與一分鐘自測，讓學生按自己的節奏完成。</p>
+            <div class="lesson-stack" aria-hidden="true">
+              <div class="lesson-stack-item"><span>01</span><b data-i18n="featureUnit1">指數基礎</b><i data-i18n="featureTime1">6 分鐘</i></div>
+              <div class="lesson-stack-item"><span>02</span><b data-i18n="featureUnit2">指數定律</b><i data-i18n="featureTime2">9 分鐘</i></div>
+              <div class="lesson-stack-item"><span>03</span><b data-i18n="featureUnit3">零與負指數</b><i data-i18n="featureTime3">8 分鐘</i></div>
+              <div class="lesson-stack-item"><span>04</span><b data-i18n="featureUnit4">科學記數法</b><i data-i18n="featureTime4">7 分鐘</i></div>
             </div>
-            <span class="map-arrow" aria-hidden="true">↗</span>
-          </a>
+          </article>
 
-          <a class="map-card map-card-lime" href="#lesson" data-unit="laws" aria-label="前往單元二：指數定律">
-            <div class="map-card-top">
-              <span class="map-num">02</span>
-              <span class="map-status" data-status="laws">未開始</span>
+          <article class="feature feature-lime">
+            <div class="feature-topline">
+              <span class="feature-tag" data-i18n="feature2Tag">INTERACTIVE LAB</span>
+              <span class="feature-index">02</span>
             </div>
-            <div class="map-art" aria-hidden="true"><span class="art-formula">a<sup>m</sup> × a<sup>n</sup></span><span class="art-eq">=</span><span class="art-formula">a<sup>m+n</sup></span></div>
-            <div class="map-card-body">
-              <p>核心 · 約 9 分鐘</p>
-              <h3>指數定律</h3>
-              <span class="map-desc">同底相乘、相除、冪的冪，一次過整理成三條規律。</span>
-            </div>
-            <span class="map-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="map-card map-card-paper" href="#lesson" data-unit="negative" aria-label="前往單元三：零與負指數">
-            <div class="map-card-top">
-              <span class="map-num">03</span>
-              <span class="map-status" data-status="negative">未開始</span>
-            </div>
-            <div class="map-art" aria-hidden="true"><span class="art-formula">a<sup>0</sup></span><span class="art-eq">=</span><span class="art-formula">1</span><span class="art-divider"></span><span class="art-formula">a<sup>−n</sup></span><span class="art-eq">=</span><span class="art-formula">1 / a<sup>n</sup></span></div>
-            <div class="map-card-body">
-              <p>易錯 · 約 8 分鐘</p>
-              <h3>零與負指數</h3>
-              <span class="map-desc">用規律解釋點解 a⁰ = 1，同負指數點樣變倒數。</span>
-            </div>
-            <span class="map-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="map-card map-card-orange" href="#lesson" data-unit="notation" aria-label="前往單元四：科學記數法">
-            <div class="map-card-top">
-              <span class="map-num">04</span>
-              <span class="map-status" data-status="notation">未開始</span>
-            </div>
-            <div class="map-art" aria-hidden="true"><span class="art-formula">A × 10<sup>n</sup></span><span class="art-condition">1 ≤ A &lt; 10</span></div>
-            <div class="map-card-body">
-              <p>應用 · 約 7 分鐘</p>
-              <h3>科學記數法</h3>
-              <span class="map-desc">用 10 的次方寫出極大與極小的數，為應用題做好準備。</span>
-            </div>
-            <span class="map-arrow" aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section lesson-section" id="lesson">
-      <div class="container">
-        <div class="lesson-wrap">
-          <div class="lesson-heading">
-            <div>
-              <p class="kicker kicker-light"><span>02</span>互動課堂</p>
-              <h2>由定義開始，<br><em>逐格拆解。</em></h2>
-            </div>
-            <p class="lesson-intro">揀左邊任何一個單元，右邊會即刻轉內容。睇完例題，記得做「一分鐘自測」再標記完成。</p>
-          </div>
-
-          <div class="lesson-shell">
-            <aside class="lesson-sidebar">
-              <div class="sidebar-top">
-                <span>學習單元</span>
-                <span id="lessonCounter">0 / 4</span>
+            <h3 data-i18n="feature2Title">指數實驗室</h3>
+            <p data-i18n="feature2Body">自由選擇底數與指數，即時觀察展開式、數值、科學記數法與增長圖表。</p>
+            <div class="lab-visual" aria-hidden="true">
+              <div class="lab-visual-head"><span>2<sup>n</sup></span><strong>32</strong></div>
+              <div class="lab-bars">
+                <i style="--h: 14%"></i><i style="--h: 24%"></i><i style="--h: 38%"></i><i style="--h: 52%"></i><i style="--h: 68%"></i><i class="is-on" style="--h: 88%"></i><i style="--h: 100%"></i>
               </div>
-              <div class="lesson-tabs" id="lessonTabs" role="tablist" aria-label="指數學習單元" aria-orientation="vertical"></div>
-              <p class="sidebar-note"><span aria-hidden="true">✳</span> 唔需要一次過學完。每次揀一個單元，專心 8 分鐘就夠。</p>
-            </aside>
-            <article class="lesson-panel" id="lessonPanel" role="tabpanel" aria-live="polite" tabindex="0"></article>
-          </div>
-        </div>
-      </div>
-    </section>
+              <div class="lab-axis"><span>n=0</span><span>n=6</span></div>
+            </div>
+            <p class="feature-caption" data-i18n="feature2Caption">2⁵ = 2 × 2 × 2 × 2 × 2 = 32</p>
+          </article>
 
-    <section class="section lab-section" id="lab">
-      <div class="container">
-        <div class="lab-shell">
-          <div class="lab-copy">
-            <p class="kicker"><span>03</span>指數實驗室</p>
-            <h2>指數增長，<br><em>拉到最大。</em></h2>
-            <p class="lab-lead">揀一個底數，再拖動指數。睇住數值點樣由 1 開始，一步一步放大。</p>
+          <article class="feature feature-paper">
+            <div class="feature-topline">
+              <span class="feature-tag" data-i18n="feature3Tag">SMART PRACTICE</span>
+              <span class="feature-index">03</span>
+            </div>
+            <h3 data-i18n="feature3Title">40 題即時練習</h3>
+            <p data-i18n="feature3Body">自選範圍與題量，每題即時批改並附完整解釋；完成後有成績與錯題回顧。</p>
+            <div class="mini-quiz" aria-hidden="true">
+              <span class="mini-quiz-label" data-i18n="miniQuizLabel">題目 01 / 10</span>
+              <strong>2<sup>3</sup> × 2<sup>4</sup> = ?</strong>
+              <div class="mini-options">
+                <span>2<sup>5</sup></span>
+                <span class="mini-correct">2<sup>7</sup></span>
+                <span>2<sup>12</sup></span>
+              </div>
+              <small data-i18n="miniQuizHint">同底相乘，指數相加。</small>
+            </div>
+          </article>
 
-            <div class="lab-controls">
-              <fieldset class="base-picker">
-                <legend>底數 <span>a</span></legend>
-                <div class="base-buttons" id="baseButtons">
-                  <button type="button" data-base="2" aria-pressed="true">2</button>
-                  <button type="button" data-base="3" aria-pressed="false">3</button>
-                  <button type="button" data-base="5" aria-pressed="false">5</button>
-                  <button type="button" data-base="10" aria-pressed="false">10</button>
-                </div>
-              </fieldset>
+          <article class="feature feature-cream">
+            <div class="feature-topline">
+              <span class="feature-tag" data-i18n="feature4Tag">PROGRESS</span>
+              <span class="feature-index">04</span>
+            </div>
+            <h3 data-i18n="feature4Title">進度會自己記住</h3>
+            <p data-i18n="feature4Body">單元完成度、最佳成績與累積答對題數自動儲存在瀏覽器，下次回來即可繼續。</p>
+            <div class="progress-visual" aria-hidden="true">
+              <div class="progress-ring"><span>2/4</span></div>
+              <div class="progress-lines"><i></i><i></i><i></i></div>
+            </div>
+          </article>
 
-              <div class="range-control">
-                <div class="range-label">
-                  <label for="exponentRange">指數 <span>n</span></label>
-                  <output for="exponentRange" id="rangeOutput">5</output>
-                </div>
-                <input type="range" id="exponentRange" min="0" max="6" step="1" value="5" aria-describedby="rangeHint">
-                <div class="range-ticks" aria-hidden="true"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
-                <p class="range-hint" id="rangeHint">由 0 拉到 6，睇下數值嘅變化。</p>
+          <article class="feature feature-coral">
+            <div class="feature-topline">
+              <span class="feature-tag" data-i18n="feature5Tag">PRINT READY</span>
+              <span class="feature-index">05</span>
+            </div>
+            <h3 data-i18n="feature5Title">公式表，一按即印</h3>
+            <p data-i18n="feature5Body">整理齊全的指數速查表，適合列印貼在書桌前，或儲存成 PDF 溫習。</p>
+            <div class="paper-stack" aria-hidden="true">
+              <div class="paper-sheet">
+                <span>EXPONENT / FORMULA</span>
+                <b>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></b>
+                <b>a<sup>0</sup> = 1</b>
+                <b>a<sup>−n</sup> = 1/a<sup>n</sup></b>
               </div>
             </div>
-            <p class="lab-tip"><span aria-hidden="true">TIP</span> n = 0 時，任何非零底數都等於 1。</p>
-          </div>
+          </article>
 
-          <div class="lab-stage" aria-live="polite">
-            <div class="lab-stage-top">
-              <span class="mono-label">LIVE CALCULATOR</span>
-              <span class="lab-equation-label">a<sup>n</sup></span>
+          <article class="feature feature-wide feature-sage">
+            <div class="feature-topline">
+              <span class="feature-tag" data-i18n="feature6Tag">RESPONSIVE</span>
+              <span class="feature-index">06</span>
             </div>
-            <div class="lab-value-row">
-              <span class="lab-expression" id="labExpression">2<sup>5</sup></span>
-              <span class="lab-equals">=</span>
-              <strong class="lab-value" id="labValue">32</strong>
+            <div class="responsive-copy">
+              <h3 data-i18n="feature6Title">由手機到課室投影</h3>
+              <p data-i18n="feature6Body">同一個平台，在手機、平板與桌面都保持清晰。無論自學、課堂示範或家長伴讀，都可以即開即用。</p>
+              <ul class="tag-list">
+                <li data-i18n="feature6Bullet1">手機自學</li>
+                <li data-i18n="feature6Bullet2">課堂投影</li>
+                <li data-i18n="feature6Bullet3">家長伴讀</li>
+              </ul>
             </div>
-            <p class="lab-expansion" id="labExpansion">2 × 2 × 2 × 2 × 2</p>
-
-            <div class="lab-chart">
-              <div class="lab-chart-head">
-                <span>數值增長</span>
-                <span>n = 0 → 6</span>
+            <div class="phone-stack" aria-hidden="true">
+              <div class="phone-screen">
+                <span>2<sup>5</sup> = 32</span>
+                <div class="phone-bars"><i></i><i></i><i></i><i></i><i></i></div>
+                <small data-i18n="phoneCaption">指數增長</small>
               </div>
-              <div class="lab-bars" id="labBars"></div>
             </div>
-
-            <div class="lab-footer">
-              <div>
-                <span>科學記數法</span>
-                <strong id="labSci">3.2 × 10¹</strong>
-              </div>
-              <p id="labNote">每增加 1 個指數，數值就再乘一次 2。</p>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section practice-section" id="practice">
-      <div class="container">
-        <div class="quiz-shell">
-          <aside class="quiz-aside">
-            <p class="kicker"><span>04</span>練習站</p>
-            <h2>做幾題，<br><em>知自己漏咗咩。</em></h2>
-            <p class="quiz-lead">每題揀完即刻有答案同解釋。唔使怕錯，錯題正好指出下一步要溫邊個單元。</p>
-            <ul class="quiz-points">
-              <li><span aria-hidden="true">01</span>可自選範圍同題量</li>
-              <li><span aria-hidden="true">02</span>每題附完整解題步驟</li>
-              <li><span aria-hidden="true">03</span>成績會自動儲存</li>
-            </ul>
-            <div class="best-score-card">
-              <span>最佳成績</span>
-              <strong id="bestScore">—</strong>
-              <small id="attemptsLabel">仲未開始練習</small>
-            </div>
-          </aside>
-
-          <div class="quiz-main">
-            <div class="quiz-stage" id="quizStage" aria-live="polite"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section mistakes-section" id="mistakes">
+    <section class="section curriculum" id="curriculum">
       <div class="container">
         <div class="section-heading">
-          <div class="heading-main">
-            <p class="kicker"><span>05</span>錯題診所</p>
-            <h2>呢幾個位，<br><em>最容易「睇漏眼」。</em></h2>
+          <div>
+            <p class="kicker"><span>03</span><span data-i18n="curriculumKicker">課程範圍</span></p>
+            <h2>
+              <span data-i18n="curriculumTitle1">四個單元，</span>
+              <span class="underline" data-i18n="curriculumTitle2">一條清晰的指數路徑。</span>
+            </h2>
           </div>
-          <div class="heading-side">
-            <p>以下四個錯誤，幾乎每個同學都遇過。睇一次「錯喺邊」，比死背公式更有用。</p>
+          <p class="section-lead" data-i18n="curriculumLead">對應香港初中數學課程中的指數與科學記數法單元。點擊任何單元，直接跳到學習平台開始。</p>
+        </div>
+
+        <div class="curriculum-list">
+          <a class="curriculum-row" href="app/?unit=basics#lesson">
+            <span class="curriculum-num">01</span>
+            <div class="curriculum-body">
+              <div class="curriculum-title-row"><h3 data-i18n="unit1Title">指數基礎</h3><span class="curriculum-tag" data-i18n="unit1Tag">入門</span></div>
+              <p data-i18n="unit1Desc">分清楚底數、指數與冪，理解重複相乘的意義。</p>
+            </div>
+            <div class="curriculum-formula">a<sup>n</sup> = a × a × … × a</div>
+            <span class="curriculum-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="curriculum-row" href="app/?unit=laws#lesson">
+            <span class="curriculum-num">02</span>
+            <div class="curriculum-body">
+              <div class="curriculum-title-row"><h3 data-i18n="unit2Title">指數定律</h3><span class="curriculum-tag" data-i18n="unit2Tag">核心</span></div>
+              <p data-i18n="unit2Desc">同底相乘、同底相除、冪的冪，以及積與商的次方。</p>
+            </div>
+            <div class="curriculum-formula">a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></div>
+            <span class="curriculum-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="curriculum-row" href="app/?unit=negative#lesson">
+            <span class="curriculum-num">03</span>
+            <div class="curriculum-body">
+              <div class="curriculum-title-row"><h3 data-i18n="unit3Title">零與負指數</h3><span class="curriculum-tag" data-i18n="unit3Tag">易錯</span></div>
+              <p data-i18n="unit3Desc">用規律解釋 a⁰ = 1，理解負指數就是倒數。</p>
+            </div>
+            <div class="curriculum-formula">a<sup>−n</sup> = 1 / a<sup>n</sup></div>
+            <span class="curriculum-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="curriculum-row" href="app/?unit=notation#lesson">
+            <span class="curriculum-num">04</span>
+            <div class="curriculum-body">
+              <div class="curriculum-title-row"><h3 data-i18n="unit4Title">科學記數法</h3><span class="curriculum-tag" data-i18n="unit4Tag">應用</span></div>
+              <p data-i18n="unit4Desc">以 A × 10ⁿ 表示極大與極小的數，並進行乘除運算。</p>
+            </div>
+            <div class="curriculum-formula">A × 10<sup>n</sup>, 1 ≤ A &lt; 10</div>
+            <span class="curriculum-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="curriculum-note"><span aria-hidden="true">✳</span><span data-i18n="curriculumNote">每個單元約 6–9 分鐘，附例題、易錯位與自測。</span></p>
+      </div>
+    </section>
+
+    <section class="section showcase" id="showcase">
+      <div class="container">
+        <div class="showcase-head">
+          <div>
+            <p class="kicker kicker-light"><span>04</span><span data-i18n="showcaseKicker">產品示範</span></p>
+            <h2>
+              <span data-i18n="showcaseTitle1">真實畫面，</span>
+              <span class="showcase-accent" data-i18n="showcaseTitle2">即開即用。</span>
+            </h2>
+          </div>
+          <p class="section-lead" data-i18n="showcaseLead">以下畫面直接來自學習平台。揀一個環節，看看學生如何由理解走到練習。</p>
+        </div>
+
+        <div class="demo-tabs" role="tablist" aria-label="產品示範" data-i18n-aria="demoTabsLabel">
+          <button class="demo-tab" id="tab-lesson" type="button" role="tab" aria-selected="true" aria-controls="demoPanel" data-demo="lesson" data-i18n="tabLesson">互動課堂</button>
+          <button class="demo-tab" id="tab-lab" type="button" role="tab" aria-selected="false" aria-controls="demoPanel" tabindex="-1" data-demo="lab" data-i18n="tabLab">指數實驗室</button>
+          <button class="demo-tab" id="tab-practice" type="button" role="tab" aria-selected="false" aria-controls="demoPanel" tabindex="-1" data-demo="practice" data-i18n="tabPractice">練習站</button>
+        </div>
+
+        <div class="demo-frame">
+          <div class="demo-browser">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="demo-browser-label">EXPONENT STATION / LIVE PRODUCT</span>
+            <a href="app/" class="demo-open" target="_top"><span data-i18n="headerCta">開啟平台</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="demo-stage" id="demoPanel" role="tabpanel" aria-labelledby="tab-lesson" aria-live="polite">
+            <img id="demoImage" src="assets/app-lesson.png" alt="指數溫習站互動課堂畫面" data-i18n-alt="demoAltLesson" decoding="async">
+          </div>
+          <div class="demo-footer">
+            <p id="demoCaption" data-i18n="demoCaptionLesson">互動課堂：每個單元由概念、公式、例題到易錯位，逐格拆解。</p>
+            <span data-i18n="showcaseNote">示範為真實產品截圖 · 所有功能均可免費使用</span>
           </div>
         </div>
 
-        <div class="mistake-grid">
-          <article class="mistake-card">
-            <span class="mistake-index">01</span>
-            <h3>同底相乘，唔係乘指數</h3>
-            <div class="wrong-line"><span>✕</span><p>2<sup>3</sup> × 2<sup>4</sup> = 2<sup>12</sup></p></div>
-            <div class="right-line"><span>✓</span><p>2<sup>3</sup> × 2<sup>4</sup> = 2<sup>3+4</sup> = 2<sup>7</sup></p></div>
-            <p class="mistake-note">相乘時，底數不變，指數<b>相加</b>。</p>
-          </article>
+        <div class="showcase-cta">
+          <a class="btn btn-lime" href="app/">
+            <span data-i18n="showcaseCta">開啟完整學習平台</span>
+            <span class="btn-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-          <article class="mistake-card">
-            <span class="mistake-index">02</span>
-            <h3>冪的冪，係指數相乘</h3>
-            <div class="wrong-line"><span>✕</span><p>(x<sup>2</sup>)<sup>3</sup> = x<sup>5</sup></p></div>
-            <div class="right-line"><span>✓</span><p>(x<sup>2</sup>)<sup>3</sup> = x<sup>2×3</sup> = x<sup>6</sup></p></div>
-            <p class="mistake-note">括號內外都有指數，將兩個指數<b>相乘</b>。</p>
-          </article>
+    <section class="section how" id="how">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="kicker"><span>05</span><span data-i18n="howKicker">如何使用</span></p>
+            <h2>
+              <span data-i18n="howTitle1">三個步驟，</span>
+              <span class="underline" data-i18n="howTitle2">建立真正的理解。</span>
+            </h2>
+          </div>
+          <p class="section-lead" data-i18n="howLead">不需要老師在旁設定，也不需要建立帳戶。打開網站，就可以開始。</p>
+        </div>
 
-          <article class="mistake-card">
-            <span class="mistake-index">03</span>
-            <h3>負指數唔等於負數</h3>
-            <div class="wrong-line"><span>✕</span><p>5<sup>−2</sup> = −25</p></div>
-            <div class="right-line"><span>✓</span><p>5<sup>−2</sup> = 1 / 5<sup>2</sup> = 1 / 25</p></div>
-            <p class="mistake-note">負號代表<b>取倒數</b>，唔係將答案變負。</p>
+        <div class="steps">
+          <article class="step">
+            <span class="step-num">01</span>
+            <p class="step-tag" data-i18n="step1Tag">STEP 01</p>
+            <h3 data-i18n="step1Title">揀一個單元</h3>
+            <p data-i18n="step1Body">由最需要鞏固的概念開始。四個單元可以按任何次序重溫。</p>
           </article>
-
-          <article class="mistake-card">
-            <span class="mistake-index">04</span>
-            <h3>科學記數法，係數要夠「細」</h3>
-            <div class="wrong-line"><span>✕</span><p>0.0003 = 3 × 10<sup>4</sup></p></div>
-            <div class="right-line"><span>✓</span><p>0.0003 = 3 × 10<sup>−4</sup></p></div>
-            <p class="mistake-note">細過 1 的數，10 的指數會是<b>負數</b>。</p>
+          <article class="step">
+            <span class="step-num">02</span>
+            <p class="step-tag" data-i18n="step2Tag">STEP 02</p>
+            <h3 data-i18n="step2Title">拉一拉，看見規律</h3>
+            <p data-i18n="step2Body">在指數實驗室改變底數與指數，將抽象公式變成眼前變化的數字。</p>
+          </article>
+          <article class="step">
+            <span class="step-num">03</span>
+            <p class="step-tag" data-i18n="step3Tag">STEP 03</p>
+            <h3 data-i18n="step3Title">練習，然後修正</h3>
+            <p data-i18n="step3Body">用即時練習檢查理解。每題都有解釋，錯題會保留在成績回顧中。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section formula-section" id="formulas">
+    <section class="section author" id="author">
       <div class="container">
-        <div class="formula-sheet" id="formulaSheet">
-          <div class="formula-head">
-            <div>
-              <p class="kicker"><span>06</span>速查表</p>
-              <h2>指數公式表</h2>
-              <p>溫習前後都可以睇，亦可以直接列印出嚟貼喺書枱前。</p>
-            </div>
-            <button class="btn btn-dark print-button" type="button" data-print>列印 / 儲存 PDF<span class="btn-arrow" aria-hidden="true">↗</span></button>
-          </div>
+        <div class="section-index">
+          <p class="kicker"><span>06</span><span data-i18n="authorKicker">作者</span></p>
+          <p class="section-side" data-i18n="authorKickerSide">一個學生，將一個學習難題變成產品。</p>
+        </div>
 
-          <div class="formula-table-wrap">
-            <table class="formula-table">
-              <caption class="visually-hidden">指數定律及科學記數法公式速查表</caption>
-              <thead>
-                <tr>
-                  <th scope="col">名稱</th>
-                  <th scope="col">公式</th>
-                  <th scope="col">條件 / 提示</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">指數定義</th>
-                  <td><span class="formula">a<sup>n</sup> = a × a × … × a</span></td>
-                  <td>n 個 a 相乘；n 為正整數</td>
-                </tr>
-                <tr>
-                  <th scope="row">一次方</th>
-                  <td><span class="formula">a<sup>1</sup> = a</span></td>
-                  <td>任何數的一次方都係自己</td>
-                </tr>
-                <tr>
-                  <th scope="row">同底相乘</th>
-                  <td><span class="formula">a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></span></td>
-                  <td>底數不變，指數相加</td>
-                </tr>
-                <tr>
-                  <th scope="row">同底相除</th>
-                  <td><span class="formula">a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></span></td>
-                  <td>a ≠ 0；指數相減</td>
-                </tr>
-                <tr>
-                  <th scope="row">冪的冪</th>
-                  <td><span class="formula">(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></span></td>
-                  <td>括號內外指數相乘</td>
-                </tr>
-                <tr>
-                  <th scope="row">積的冪</th>
-                  <td><span class="formula">(ab)<sup>n</sup> = a<sup>n</sup>b<sup>n</sup></span></td>
-                  <td>括號內每個因數都要次方</td>
-                </tr>
-                <tr>
-                  <th scope="row">商的冪</th>
-                  <td><span class="formula">(a ÷ b)<sup>n</sup> = a<sup>n</sup> ÷ b<sup>n</sup></span></td>
-                  <td>b ≠ 0；分子分母各自次方</td>
-                </tr>
-                <tr>
-                  <th scope="row">零指數</th>
-                  <td><span class="formula">a<sup>0</sup> = 1</span></td>
-                  <td>a ≠ 0；0<sup>0</sup> 未定義</td>
-                </tr>
-                <tr>
-                  <th scope="row">負指數</th>
-                  <td><span class="formula">a<sup>−n</sup> = 1 ÷ a<sup>n</sup></span></td>
-                  <td>a ≠ 0；等於取倒數</td>
-                </tr>
-                <tr>
-                  <th scope="row">負指數（分數）</th>
-                  <td><span class="formula">(a ÷ b)<sup>−n</sup> = (b ÷ a)<sup>n</sup></span></td>
-                  <td>a、b ≠ 0；倒轉再取正指數</td>
-                </tr>
-                <tr>
-                  <th scope="row">科學記數法</th>
-                  <td><span class="formula">N = A × 10<sup>n</sup></span></td>
-                  <td>1 ≤ A &lt; 10；n 為整數</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="author-card">
+          <div class="author-portrait">
+            <span class="author-initials" aria-hidden="true">CWL</span>
+            <span class="author-class" data-i18n="authorClassBadge">CLASS 3A</span>
+            <div class="author-orbit" aria-hidden="true">
+              <span>a<sup>m</sup></span><span>2<sup>5</sup></span><span>a<sup>0</sup></span><span>A×10<sup>n</sup></span>
+            </div>
+            <span class="portrait-note" data-i18n="authorPortraitNote">設計 · 內容 · 程式</span>
           </div>
-          <div class="formula-foot">
-            <span>指數溫習站 · 速查表</span>
-            <span>溫馨提示：化簡完，記得檢查底數同指數有冇抄錯。</span>
+          <div class="author-copy">
+            <p class="author-role" data-i18n="authorRole">設計、內容及開發</p>
+            <h2>3A 陳穎霖</h2>
+            <p class="author-en">Chan Wing Lam · <span data-i18n="authorClass">3A 班 · 香港</span></p>
+            <blockquote data-i18n="authorQuote">「我發現自己溫指數時，最難不是計數，而是記住幾時加、幾時乘。所以我把每個規則做成可以看、可以試、可以即刻檢查的工具。」</blockquote>
+            <p class="author-bio" data-i18n="authorBio">陳穎霖是香港中三學生，喜歡將艱深的數學概念拆成簡單、可操作的學習體驗。指數溫習站由構思、內容、設計到程式碼，均由他一手完成。</p>
+            <div class="author-actions">
+              <a class="btn btn-dark" href="https://github.com/s20240106-web/Mathematics-learning-website" target="_blank" rel="noopener">
+                <span data-i18n="authorLink">在 GitHub 查看專案</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+              <span class="author-subject">MATHEMATICS / 2026</span>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="faq-heading">
+          <div>
+            <p class="kicker"><span>07</span><span data-i18n="faqKicker">常見問題</span></p>
+            <h2 data-i18n="faqTitle">還有問題？</h2>
+          </div>
+          <p class="section-lead" data-i18n="faqLead">關於這個學習平台，你可能想知的事。</p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item">
+            <summary><span data-i18n="faq1Q">這個平台收費嗎？</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faq1A">完全免費。指數溫習站是一個學生原創的學習項目，沒有訂閱、付款或隱藏收費。</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2Q">需要註冊帳戶嗎？</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faq2A">不需要。打開網站就可以使用；學習進度會自動儲存在你的瀏覽器。</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3Q">適合哪個年級？</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faq3A">主要為中一至中三學生而設，對應香港初中數學課程的指數與科學記數法單元。</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4Q">學習內容有英文版嗎？</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faq4A">學習平台的課程與題目以繁體中文編寫，配合香港初中課堂；這個產品介紹網站則提供繁體中文及英文版本。</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq5Q">我的學習進度會去哪裡？</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faq5A">進度只儲存在你的瀏覽器 localStorage，不會上傳到伺服器。更換裝置或清除瀏覽器資料後，進度會重新開始。</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq6Q">是誰開發的？</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faq6A">指數溫習站由 3A 陳穎霖設計及開發，涵蓋內容、視覺設計與前端程式。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-card">
+          <span class="final-watermark" aria-hidden="true">a<sup>n</sup></span>
+          <p class="final-kicker" data-i18n="finalKicker">READY WHEN YOU ARE</p>
+          <h2>
+            <span data-i18n="finalTitle1">下一次溫習，</span>
+            <span data-i18n="finalTitle2">由一個「我明喇」開始。</span>
+          </h2>
+          <p class="final-body" data-i18n="finalBody">四個單元、一個實驗室、40 題練習。免費、免註冊，現在就可以開始。</p>
+          <a class="btn btn-dark btn-large" href="app/">
+            <span data-i18n="finalCta">進入學習平台</span>
+            <span class="btn-arrow" aria-hidden="true">↗</span>
+          </a>
+          <p class="final-meta" data-i18n="finalMeta">免費 · 無需註冊 · 進度自動儲存</p>
         </div>
       </div>
     </section>
@@ -476,32 +590,45 @@
         <div class="footer-brand">
           <a class="brand brand-footer" href="#top">
             <span class="brand-mark" aria-hidden="true">a<sup>n</sup></span>
-            <span class="brand-text">指數溫習站<small>EXPONENT STATION</small></span>
+            <span class="brand-copy">
+              <span class="brand-name" data-i18n="brandName">指數溫習站</span>
+              <span class="brand-sub" data-i18n="brandSub">EXPONENT STATION</span>
+            </span>
           </a>
-          <p>一個為中一至中三學生而設的指數自學空間。<br>由概念到練習，一步一步嚟。</p>
+          <p data-i18n="footerTagline">為中一至中三而設的互動指數學習平台。由學生設計，為學生而做。</p>
+          <p class="footer-credit"><span data-i18n="footerCredit">設計及開發</span> <strong>3A 陳穎霖</strong></p>
         </div>
-        <div class="footer-nav">
+
+        <div class="footer-links">
           <div>
-            <span>學</span>
-            <a href="#map">學習地圖</a>
-            <a href="#lesson">互動課堂</a>
-            <a href="#lab">指數實驗室</a>
+            <span data-i18n="footerExplore">探索</span>
+            <a href="#features" data-i18n="navFeatures">功能</a>
+            <a href="#curriculum" data-i18n="navCurriculum">課程</a>
+            <a href="#showcase" data-i18n="navShowcase">示範</a>
           </div>
           <div>
-            <span>練</span>
-            <a href="#practice">練習站</a>
-            <a href="#mistakes">錯題診所</a>
-            <a href="#formulas">公式表</a>
+            <span data-i18n="footerProject">專案</span>
+            <a href="app/" data-i18n="footerApp">學習平台</a>
+            <a href="https://github.com/s20240106-web/Mathematics-learning-website" target="_blank" rel="noopener" data-i18n="footerGithub">GitHub 專案</a>
+            <a href="#faq" data-i18n="navFaq">常見問題</a>
+          </div>
+        </div>
+
+        <div class="footer-lang">
+          <span data-i18n="footerLanguage">語言</span>
+          <div class="lang-toggle lang-toggle-footer" role="group" aria-label="選擇語言" data-i18n-aria="langLabel">
+            <button class="lang-btn" type="button" data-lang="zh" aria-pressed="true" aria-label="繁體中文">繁</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>© 2026 指數溫習站 · 僅供學習用途</span>
-        <span>適合中一至中三 · 對應指數與科學記數法單元</span>
+        <span data-i18n="footerCopyright">© 2026 指數溫習站 · 由 3A 陳穎霖製作</span>
+        <span class="footer-made">HONG KONG · MATHEMATICS · 2026</span>
+        <a href="#top" data-i18n="footerBackTop">返回頂部 ↑</a>
       </div>
     </div>
   </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
